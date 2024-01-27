@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/InteractiveResume/static/css/main.c3a20cbe.css",
+    "main.js": "/InteractiveResume/static/js/main.b8070a84.js",
+    "static/js/787.1ed0c42c.chunk.js": "/InteractiveResume/static/js/787.1ed0c42c.chunk.js",
+    "static/media/me.png": "/InteractiveResume/static/media/me.29ffc1e51604ae95f4a0.png",
+    "static/media/me3.png": "/InteractiveResume/static/media/me3.d5508879dd2a0db350c5.png",
+    "static/media/sc.png": "/InteractiveResume/static/media/sc.0c48636b9f9ba306d2ed.png",
+    "static/media/tdl.png": "/InteractiveResume/static/media/tdl.6bcad9a3b9c03e86abcb.png",
+    "static/media/RESUME.pdf": "/InteractiveResume/static/media/RESUME.601468de2c7e43b9e1d0.pdf",
+    "static/media/p2.png": "/InteractiveResume/static/media/p2.a358a69233f4f0d86a65.png",
+    "static/media/ecart.png": "/InteractiveResume/static/media/ecart.72c3e25ba971e47c61eb.png",
+    "static/media/notebook.png": "/InteractiveResume/static/media/notebook.7ac5a4d81ffa508f6994.png",
+    "static/media/tictt.png": "/InteractiveResume/static/media/tictt.b9f877cc70b7c4a9a1e1.png",
+    "static/media/py.png": "/InteractiveResume/static/media/py.6a5cbc319ab3ddf8ef92.png",
+    "static/media/react.png": "/InteractiveResume/static/media/react.86c8d9eba03e29814d2a.png",
+    "static/media/java.png": "/InteractiveResume/static/media/java.ddf8676bd569fe01ab44.png",
+    "static/media/cpp.png": "/InteractiveResume/static/media/cpp.24a8f93854ab092f17a7.png",
+    "static/media/pr.jpg": "/InteractiveResume/static/media/pr.c6e6a9bdf28e422a2b90.jpg",
+    "static/media/github.png": "/InteractiveResume/static/media/github.d3263084234dc705b2ae.png",
+    "static/media/html.png": "/InteractiveResume/static/media/html.cfb2ba4a6b1c3de295bc.png",
+    "static/media/mongodb.png": "/InteractiveResume/static/media/mongodb.979acc0a0144486195bb.png",
+    "static/media/bs.png": "/InteractiveResume/static/media/bs.268c4375260420e8d982.png",
+    "static/media/css.png": "/InteractiveResume/static/media/css.4a6549b8c2b4cda8bb88.png",
+    "static/media/js.png": "/InteractiveResume/static/media/js.3dfb665e058d08c99f28.png",
+    "index.html": "/InteractiveResume/index.html",
+    "main.c3a20cbe.css.map": "/InteractiveResume/static/css/main.c3a20cbe.css.map",
+    "main.b8070a84.js.map": "/InteractiveResume/static/js/main.b8070a84.js.map",
+    "787.1ed0c42c.chunk.js.map": "/InteractiveResume/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3a20cbe.css",
+    "static/js/main.b8070a84.js"
+  ]
+}
