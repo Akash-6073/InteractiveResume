@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react';
 import "../Style/style.css"
 import "../Style/utils.css"
 import "../Style/responsive.css"
@@ -18,21 +17,6 @@ import redux from "../Images/redux.png"
 
 
 export default function Myskills(props) {
-
-
-    const observe = new IntersectionObserver((entries)=>{
-        entries.forEach((entry)=>{
-          if(entry.isIntersecting)
-          {
-            entry.target.classList.add('zoomShow');
-          }
-        })
-      })
-      
-      const hide=document.querySelectorAll(".zoomHide");
-      hide.forEach((el)=>observe.observe(el));
-
-      
   return (
    <>
     <div className="mw3 myskills">

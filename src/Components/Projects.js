@@ -1,34 +1,13 @@
-import React ,{useState}from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, {useState}from 'react'
 import "../Style/style.css"
 import "../Style/utils.css"
-// import pj from "../Images/project.png"
-import js from "../Images/js.png"
-import gh from "../Images/github.png"
-import p2 from "../Images/p2.png"
 import tictt from "../Images/tictt.png"
 import notebook from "../Images/notebook.png"
 import ecart from "../Images/ecart.png"
-import tdl from "../Images/tdl.png"
+import tdl from "../Images/cc.png"
 import sc from "../Images/sc.png"
 
 export default function Projects() {
-    const [shake, setshake] = useState(false)
-
-    // const observe = new IntersectionObserver((entries)=>{
-    //     entries.forEach((entry)=>{
-    //       if(entry.isIntersecting)
-    //       {
-    //         entry.target.classList.add('pjShow');
-    //       }
-    //     })
-    //   })
-      
-    //   const hide=document.querySelectorAll(".pjHide");
-    //   hide.forEach((el)=>observe.observe(el));
-
-
-      
   return (
      <>
       <div className="hr mw3" name="projects">
@@ -45,9 +24,9 @@ export default function Projects() {
             <img src={ecart} alt="" />
             <div className="content">
                 <p className='contentDesc'>Made a Ecommerce website (Ecart) with features seamless Stripe payment integration and includes an admin panel for efficient management of products, orders, and users.</p> <br />
-                <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used : </b> <span style={{color:"#ff004f"}}>MERN , Stripe Payment , Redux tools , Axios , Material UI , and other frontend frameworks</span>  </p>
+                <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used : </b> <span style={{color:"#ff004f"}}>MERN,  Stripe Payment,  Redux tools,  Axios,  Material UI,  and other frontend frameworks</span>  </p>
                 <div className='pbtns'>
-                   <a href="" aria-disabled> <button className='disabled' >Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
+                   <a href="https://ecart-smoky.vercel.app/" > <button className='' >Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
                     <a href="https://github.com/Akash-6073/Ecart-Project"><h1><i className="fa-brands fa-github fa-2xs " style={{height:"20px"}}></i></h1></a>
                 </div>
             </div>
@@ -57,7 +36,7 @@ export default function Projects() {
             <img src={notebook} alt="" />
             <div className="content">
                 <p className='contentDesc'>A MERN-based myNotebook app enabling users to effortlessly create, edit, and organize notes with MongoDB, ExpressJS, React, and Node.js.</p> <br />
-                <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used : </b> <span style={{color:"#ff004f"}}>MongoDB , Express , ReactJS , NodeJS , other frontend frameworks</span>  </p>
+                <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used : </b> <span style={{color:"#ff004f"}}>MongoDB,  Express,  ReactJS,  NodeJS,  other frontend frameworks</span>  </p>
                 <div className='pbtns'>
                    <a href="https://inotebook2-49rm.onrender.com/" target='_blank'> <button>Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
                     <a href="https://github.com/Akash-6073/iNotebook-CRUD-APP-" target='_blank'><h1><i className="fa-brands fa-github fa-2xs"></i></h1></a>
@@ -69,7 +48,7 @@ export default function Projects() {
             <img src={tictt} alt="" />
             <div className="content">
                 <p className='contentDesc'>Unleash your X's and O's in a sleek new Tic Tac Toe game built with HTML, CSS, and JavaScript!</p> <br />
-                <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used :  </b> <span style={{color:"#ff004f"}}>  HTML , CSS , JS</span></p>
+                <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used :  </b> <span style={{color:"#ff004f"}}>  HTML, CSS, JS</span></p>
                 <div className='pbtns'>
                    <a href="https://tice-tac-toe.netlify.app/" target='_blank'> <button>Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
                     <a href="https://github.com/Akash-6073/Tic-Tac-Toe" target='_blank'><h1><i className="fa-brands fa-github fa-2xs"></i></h1></a>
@@ -77,26 +56,27 @@ export default function Projects() {
             </div>
         </div>
         <div className="box ">
-        <h3>TO - DO - LIST</h3>
+        <h3>Currency Converter</h3>
             <img src={tdl} alt="" />
             <div className="content">
-                <p className='contentDesc'>This web app, built with HTML, CSS, and JS, keeps the tasks safe in local storage.</p> <br />
-                <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used : </b> <span style={{color:"#ff004f"}}>HTML , CSS , JS</span>  </p>
+                <p className='contentDesc'>I built a fully responsive currency converter app using HTML, CSS, and JavaScript. It fetches live exchange rates from a 
+GitHub API, providing real-time conversions.</p> <br />
+                <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used : </b> <span style={{color:"#ff004f"}}>HTML, CSS, JS, Fetch API</span>  </p>
                 <div className='pbtns'>
-                   <a href="https://to-do-list63.netlify.app/" target='_blank'> <button>Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
-                    <a href="https://github.com/Akash-6073/To-Do-List" target='_blank'><h1><i className="fa-brands fa-github fa-2xs"></i></h1></a>
+                   <a href="https://currconvertr.netlify.app/" target='_blank'> <button>Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
+                    <a href="https://github.com/Akash-6073/Currency-Converter" target='_blank'><h1><i className="fa-brands fa-github fa-2xs"></i></h1></a>
                 </div>
             </div>
         </div>
         <div className="box ">
-        <h3>Spotify Clone</h3>
+        <h3>CRUD APP</h3>
             <img src={sc} alt="" />
             <div className="content">
-                <p className='contentDesc'>Created a Static display of Spotify Clone using JavaScript.</p> <br />
-                <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used : </b> <span style={{color:"#ff004f"}}>JavaScript , CSS</span>  </p>
+                <p className='contentDesc'>Built a CRUD app that improved my skills in managing state, handling asynchronous operations, and enhancing user interaction.</p> <br />
+                <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used : </b> <span style={{color:"#ff004f"}}>MERN</span>  </p>
                 <div className='pbtns'>
-                   <a href="https://spotify-clone63.netlify.app/" target='_blank'> <button >Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
-                    <a href="https://github.com/Akash-6073/Spotify-Clone" target='_blank'><h1><i className="fa-brands fa-github fa-2xs"></i></h1></a>
+                   <a href="https://crud-app-pqua.onrender.com/" target='_blank'> <button >Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
+                    <a href="https://github.com/Akash-6073/CRUD-APP" target='_blank'><h1><i className="fa-brands fa-github fa-2xs"></i></h1></a>
                 </div>
             </div>
         </div>

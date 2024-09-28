@@ -11,52 +11,32 @@ import Myskills from './Components/Myskills';
 function App() {
 const [ht, setht] = useState("0")
 
-  const onclick=(tname)=>{
-      let l1=document.getElementById("tlink1")
-      let l2=document.getElementById("tlink2")
-      let l3=document.getElementById("tlink3")
-      let l4=document.getElementById("tlink4")
-      let tn1=document.getElementById("lang");
-      let tn2=document.getElementById("front");
-      let tn3=document.getElementById("back");
-      let tn4=document.getElementById("dsa");
-      if(tname==="lang"){
-        l1.classList.add("activeLink");
-        l2.classList.remove("activeLink");
-        l3.classList.remove("activeLink");
-        l4.classList.remove("activeLink");
-      }
-      if(tname==="front")
-      {
-        l1.classList.remove("activeLink");
-        l2.classList.add("activeLink");
-        l3.classList.remove("activeLink");
-        l4.classList.remove("activeLink");
-      }
-      if(tname==="back")
-      {
-        l1.classList.remove("activeLink");
-        l2.classList.remove("activeLink");
-        l3.classList.add("activeLink");
-        l4.classList.remove("activeLink");
-      }
-      if(tname==="dsa")
-      {
-        l1.classList.remove("activeLink");
-        l2.classList.remove("activeLink");
-        l3.classList.remove("activeLink");
-        l4.classList.add("activeLink");
-      }
+const onclick = (tname) => {
+  const tabs = {
+    lang: document.getElementById("tlink1"),
+    front: document.getElementById("tlink2"),
+    back: document.getElementById("tlink3"),
+    dsa: document.getElementById("tlink4"),
+  };
 
-      let vars=document.querySelectorAll(".linksRight")
-        for(var i=0;i<vars.length;i++)
-        {
-          vars[i].classList.add("none");
-        }
-        let inames=document.getElementById(tname);
-        inames.classList.remove("none")
-        
+  // Remove 'activeLink' class from all tabs
+  Object.values(tabs).forEach(tab => tab.classList.remove("activeLink"));
+
+  // Add 'activeLink' class to the clicked tab
+  if (tabs[tname]) {
+    tabs[tname].classList.add("activeLink");
   }
+
+  // Hide all sections
+  document.querySelectorAll(".linksRight").forEach(el => el.classList.add("none"));
+
+  // Show the clicked section
+  const inames = document.getElementById(tname);
+  if (inames) {
+    inames.classList.remove("none");
+  }
+};
+
   const [id,setid]=useState('');
 
   // on scroll effect
