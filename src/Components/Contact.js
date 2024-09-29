@@ -147,11 +147,11 @@ export default function Contact() {
               <p><span ><i className="fa-solid fa-envelope" style={{color:"#ababab"}}></i></span>&nbsp;<a href="mailto:akashmahendrakar6073@gmail.com" style={{textDecoration:"none", color:"black"}}>Email</a></p>
               <p><span  ><i className="fa-solid fa-square-phone" style={{color:"#ababab"}}></i></span>&nbsp;+91 8919596263</p>
               <div className="contactMedia">
-              <a target='_blank'  href="https://www.instagram.com/akash__mahendrakar/" style={{paddingLeft:"0"}}  className="insta"> <i className="fa-brands fa-instagram zoomHide" style={{ color: "#e1306c"}}></i> </a>
-              <a target='_blank' href="https://www.facebook.com/cute.kameenaakshu/"><i className="fa-brands fa-facebook zoomHide " style={{color:"#4267B2"}}></i> </a>
-              <a target='_blank' href="https://github.com/Akash-6073"><i className="fa-brands fa-github zoomHide "></i> </a>
-              <a target='_blank' href="https://www.linkedin.com/in/akash-mahendrakar-59b8a1220/"><i className="fa-brands fa-linkedin  zoomHide" style={{color:"#0a66c2"}} ></i> </a>
-              <a target='_blank' href="https://wa.me/918919596263" style={{textDecoration:"none", color:"black"}}><i className="fa-brands fa-whatsapp  zoomHide" style={{color: "#2db950"}}></i></a>
+              <a target='_blank'  href="https://www.instagram.com/akash__mahendrakar/" style={{paddingLeft:"0"}}  className="insta"> <i className="fa-brands fa-instagram " style={{ color: "#e1306c"}}></i> </a>
+              <a target='_blank' href="https://www.facebook.com/cute.kameenaakshu/"><i className="fa-brands fa-facebook  " style={{color:"#4267B2"}}></i> </a>
+              <a target='_blank' href="https://github.com/Akash-6073"><i className="fa-brands fa-github  "></i> </a>
+              <a target='_blank' href="https://www.linkedin.com/in/akash-mahendrakar-59b8a1220/"><i className="fa-brands fa-linkedin  " style={{color:"#0a66c2"}} ></i> </a>
+              <a target='_blank' href="https://wa.me/918919596263" style={{textDecoration:"none", color:"black"}}><i className="fa-brands fa-whatsapp  " style={{color: "#2db950"}}></i></a>
               </div>
               <p style={{fontSize:"24px"}} className='thanks'>Thanks for  Visiting my Portfolio !</p>
               

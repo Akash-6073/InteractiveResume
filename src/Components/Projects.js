@@ -26,8 +26,8 @@ export default function Projects() {
                 <p className='contentDesc'>Made a Ecommerce website (Ecart) with features seamless Stripe payment integration and includes an admin panel for efficient management of products, orders, and users.</p> <br />
                 <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used : </b> <span style={{color:"#ff004f"}}>MERN,  Stripe Payment,  Redux tools,  Axios,  Material UI,  and other frontend frameworks</span>  </p>
                 <div className='pbtns'>
-                   <a href="https://ecart-smoky.vercel.app/" > <button className='' >Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
-                    <a href="https://github.com/Akash-6073/Ecart-Project"><h1><i className="fa-brands fa-github fa-2xs " style={{height:"20px"}}></i></h1></a>
+                   <a href="https://ecart-smoky.vercel.app/" target='_blank'> <button className='' >Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
+                    <a href="https://github.com/Akash-6073/Ecart-Project" target='_blank'><h1><i className="fa-brands fa-github fa-2xs " style={{height:"20px"}}></i></h1></a>
                 </div>
             </div>
         </div>
