@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import pr from './Images/pr.jpg'
 import About from './Components/About';
 import Navbar from './Components/Navbar';
 import Projects from './Components/Projects';
@@ -10,7 +9,7 @@ import { Link } from 'react-scroll';
 import Myskills from './Components/Myskills';
 function App() {
 const [ht, setht] = useState("0")
-
+const pr=process.env.REACT_APP_PR
 const onclick = (tname) => {
   const tabs = {
     lang: document.getElementById("tlink1"),

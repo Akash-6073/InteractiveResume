@@ -1,128 +1,52 @@
-import React, { useRef } from 'react'
-import "../Style/style.css"
-import "../Style/utils.css"
+import React, { useRef } from 'react';
+import "../Style/style.css";
+import "../Style/utils.css";
 import emailjs from '@emailjs/browser';
+import { useForm } from 'react-hook-form';
+import { ToastContainer, toast ,Bounce} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
-
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    let rname = document.querySelector(".rname");
-    let remail = document.querySelector(".remail");
-    let msg=document.getElementById("msg");
-    
-
-    let x= rname.value;
-    let y= remail.value;
-    if(x==="" || y==="")
-    {
-      if(x==="")
-      {
-      msg.innerText="!! Enter a Valid Name"
-      rname.classList.add("shake");
-      rname.classList.remove("removeBorder");
-      msg.classList.remove("vsble");
-      msg.classList.remove("success")
-
-        
-      setTimeout(()=>{
-      rname.classList.remove("shake");
-      rname.classList.add("removeBorder");
-      msg.classList.add("vsble");
-
-
-      },1000)
-      setTimeout(()=>{
-      msg.classList.remove("errorMsg")
-
-      },3000)
-      }
-      if (y==="")
-      {
-        msg.innerText="!! Enter a Valid Email"
-        remail.classList.add("shake");
-        remail.classList.remove("removeBorder");
-        msg.classList.remove("vsble");
-      msg.classList.remove("success")
-
-        setTimeout(()=>{
-        remail.classList.remove("shake");
-        remail.classList.add("removeBorder");
-        // msg.classList.remove("errorMsg")
-        msg.classList.add("vsble");
-
-        },1000)
-        setTimeout(()=>{
-            msg.classList.remove("errorMsg")
-      },3000)
-
-      }
-      if (x==="" && y==="")
-      {
-        msg.innerText=" !! Enter a Valid Name and Email"
-        rname.classList.add("shake");
-        remail.classList.add("shake");
-        remail.classList.remove("removeBorder");
-        rname.classList.remove("removeBorder");
-        msg.classList.remove("vsble");
-      msg.classList.remove("success")
-        setTimeout(()=>{
-        rname.classList.remove("shake");
-        remail.classList.remove("shake");
-        remail.classList.add("removeBorder");
-        rname.classList.add("removeBorder");
-        // msg.classList.remove("errorMsg")
-        msg.classList.add("vsble");
-        },1000)
-
-        setTimeout(()=>{
-          msg.classList.remove("errorMsg")
-        },3000)
-
-      }
-      msg.classList.remove("vsble");
-      msg.classList.remove("thanks");
-      msg.classList.add("errorMsg");
-      setTimeout(()=>{
-        msg.classList.add("vsble");
-      msg.classList.remove("activeMsg")
-      },3000)
-
-    }
-    else  {
-    emailjs.sendForm('service_5cgnuya', 'template_ywwb4s8', form.current, 'p1lmxrHXrfKUfsxvt')
-    
-      .then((result) => {
-         
-          console.log(x)
-          e.target.reset();
-          msg.innerText="Thank you "+x+" 😊! Message sent Successfully"
-          msg.classList.remove("vsble");
-          msg.classList.remove("errorMsg");
-          msg.classList.add("activeMsg")
-          msg.classList.add("success")
-          setTimeout(()=>{
-            msg.classList.add("vsble");
-          msg.classList.remove("activeMsg")
-          },4500)
-         
-      }, (error) => {
-          console.log(error.text);
-          msg.innerText="!! Please check you have a valid internet connection !"
-          msg.classList.remove("vsble");
-          msg.classList.add("errorMsg");
-          msg.classList.remove("activeMsg")
-          msg.classList.remove("success")
-          setTimeout(()=>{
-            msg.classList.add("vsble");
-          msg.classList.remove("errorMsg");
-          },3000)
-      });
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const [loading, setLoading] = React.useState(false);
+  const form = useRef()
+  const sendEmail = async (data) => {
+    setLoading(true);
+    try {
+      await emailjs.sendForm(
+        process.env.REACT_APP_SERVICE_ID, 
+        process.env.REACT_APP_TEMPLATE_ID, 
+        form.current, 
+        process.env.REACT_APP_PUBLIC_KEY
+      );
+      toast.success(`Thank you ${data.user_name} 😊 Message sent successfully!`, {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+        });
+      reset();
+    } catch (error) {
+      toast.error('Internal Server Error!!😔', {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+        });
+    } finally {
+      setLoading(false);
     }
   };
-
   const observe = new IntersectionObserver((entries)=>{
     entries.forEach((entry)=>{
       if(entry.isIntersecting)
@@ -134,43 +58,96 @@ export default function Contact() {
   
   const hide=document.querySelectorAll(".zoomHide");
   hide.forEach((el)=>observe.observe(el));
-
   return (
     <>
-       <div className="hr mw3" name="contact">
-      <hr />
-    </div>
-    <div className='mw2 contactMain'>
-    <div className="mw3 contact">
-        <div className="contactLeft">
-              <h1 className='heading'>Contact me</h1>
-              <p><span ><i className="fa-solid fa-envelope" style={{color:"#ababab"}}></i></span>&nbsp;<a href="mailto:akashmahendrakar6073@gmail.com" style={{textDecoration:"none", color:"black"}}>Email</a></p>
-              <p><span  ><i className="fa-solid fa-square-phone" style={{color:"#ababab"}}></i></span>&nbsp;+91 8919596263</p>
-              <div className="contactMedia">
-              <a target='_blank'  href="https://www.instagram.com/akash__mahendrakar/" style={{paddingLeft:"0"}}  className="insta"> <i className="fa-brands fa-instagram " style={{ color: "#e1306c"}}></i> </a>
-              <a target='_blank' href="https://www.facebook.com/cute.kameenaakshu/"><i className="fa-brands fa-facebook  " style={{color:"#4267B2"}}></i> </a>
-              <a target='_blank' href="https://github.com/Akash-6073"><i className="fa-brands fa-github  "></i> </a>
-              <a target='_blank' href="https://www.linkedin.com/in/akash-mahendrakar-59b8a1220/"><i className="fa-brands fa-linkedin  " style={{color:"#0a66c2"}} ></i> </a>
-              <a target='_blank' href="https://wa.me/918919596263" style={{textDecoration:"none", color:"black"}}><i className="fa-brands fa-whatsapp  " style={{color: "#2db950"}}></i></a>
-              </div>
-              <p style={{fontSize:"24px"}} className='thanks'>Thanks for  Visiting my Portfolio !</p>
+            <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"
+      />
+      <div className="hr mw3" name="contact">
+        <hr />
+      </div>
+      <div className='mw2 contactMain'>
+        <div className="mw3 contact">
+          <div className="contactLeft">
+            <h1 className='heading'>Contact me</h1>
+            <p>
+              <span><i className="fa-solid fa-envelope" style={{ color: "#ababab" }}></i></span>&nbsp;
+              <a href="mailto:akashmahendrakar6073@gmail.com" style={{ textDecoration: "none", color: "black" }}>Email</a>
+            </p>
+            <p>
+              <span><i className="fa-solid fa-square-phone" style={{ color: "#ababab" }}></i></span>&nbsp;+91 8919596263
+            </p>
+            <div className="contactMedia">
+              <a target='_blank' href={process.env.REACT_APP_INSTA} style={{ paddingLeft: "0" }} className="insta">
+                <i className="fa-brands fa-instagram " style={{ color: "#e1306c" }}></i>
+              </a>
+              <a target='_blank' href={process.env.REACT_APP_FB}>
+                <i className="fa-brands fa-facebook " style={{ color: "#4267B2" }}></i>
+              </a>
+              <a target='_blank' href={process.env.REACT_APP_GITHUB}>
+                <i className="fa-brands fa-github "></i>
+              </a>
+              <a target='_blank' href={process.env.REACT_APP_LINKEDIN}>
+                <i className="fa-brands fa-linkedin" style={{ color: "#0a66c2" }}></i>
+              </a>
+              <a target='_blank' disabled={true} href={process.env.REACT_APP_WP} style={{ textDecoration: "none", color: "black" }}>
+                <i disabled={true} className="fa-brands fa-whatsapp" style={{ color: "#2db950" }}></i>
+              </a>
+            </div>
+            <p style={{ fontSize: "24px" }} className='thanks'>Thanks for Visiting my <a href="https://github.com/Akash-6073/InteractiveResume" target='_blank' style={{color:"#ff004f",textDecoration:"underline"}}>Portfolio !</a></p>
+          </div>
+          <div className="contactRight">
+            <form ref={form} onSubmit={handleSubmit(sendEmail)}>
+              <p className='message'>Send me a Message </p>
+              <input 
+                className={`rname removeBorder ${errors.user_name ? 'error' : ''}`} 
+                type="text" 
+                placeholder={errors.user_name?'*Please enter your Name': 'Your Name' } 
+                {...register('user_name', { required: true })} 
+              />
+              {errors.user_name && <span className="errorMsg"></span>}
               
+              <input 
+                className={`remail removeBorder ${errors.user_email ? 'error' : ''}`} 
+                type="email" 
+                placeholder={errors.user_email?'*Please enter your Email': 'Your Email' }
+                {...register('user_email', { required: true })} 
+              />
+              {errors.user_email && <span className="errorMsg"></span>}
+              
+              <textarea 
+                name="message" 
+                //  style={{ background: "rgba(128, 128, 128, 0.681)" }}
+                cols="30" 
+                rows="5" 
+                {...register('message', { required: true })} 
+                style={{ resize: "none" }}
+                className={errors.message && "error"}
+                placeholder={errors.message?'*Message...': 'Message' }
+
+              ></textarea>
+              {errors.message && <span className="errorMsg"></span>}
+
+              <button type='submit' className={loading?"submittingnForm":""} disabled={loading}>
+                <i className="fa-solid fa-paper-plane"></i>&nbsp;
+                {loading ? "Sending Message..." : "Let's Collaborate"}
+              </button>
+            </form>
+          </div>
         </div>
-        <div className="contactRight">
-          <form action="" ref={form} onSubmit={sendEmail}>
-           <p className='message'>Send me a Message</p>
-            <input className='rname removeBorder' type="text" placeholder='Your Name' name="user_name"/>
-            <input className='remail removeBorder' type="email" placeholder='Your Email' name="user_email"/>
-            <textarea name="message" style={{ background:"rgba(128, 128, 128, 0.681)"  }} id="" cols="30" rows="5" placeholder='Message'></textarea>
-            <button type='submit' ><i className="fa-solid fa-paper-plane"></i>&nbsp;Let's Collaborate</button>
-            <span className='vsble' id='msg'> shdbjas </span>
-          </form>
-        </div>
-    </div>
-    </div>
-    <div className="mw2 footer">
-      Copyright &copy; Made with &nbsp;<i className="fa-solid fa-heart" style={{color:"#ff004f"}}></i>&nbsp; by Akash Mahendrakar
-    </div>
+      </div>
+      <div className="mw2 footer">
+        Made with &nbsp;<i className="fa-solid fa-heart" style={{ color: "#ff004f" }}></i>&nbsp; by Akash Mahendrakar
+      </div>
     </>
-  )
+  );
 }

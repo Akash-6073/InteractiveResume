@@ -102,6 +102,8 @@
 }
 
 
+
+
 /* ABOUT */
 .about{
     display: flex;
@@ -287,6 +289,32 @@ margin-bottom: 10px;
     padding: 0 75px;
     animation: anim 1s ease 1;
 }
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    margin: 60px;
+    width: 120px;
+  }
+  
+  .rating {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .filled-star {
+    color: gold;
+    font-size: 1.2em;
+  }
+  
+  .empty-star {
+    color: lightgray;
+    font-size: 1.2em;
+  }
+  
 @keyframes anim {
     0% {
       transform: scale(0, 0);
@@ -320,6 +348,61 @@ margin-bottom: 10px;
     display: flex;
 }
 
+
+/* Common style for all tab links */
+.tlink {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* Style for the underline animation */
+  .tlink:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background: #ff004f;
+    transition: all 0.4s ease;
+  }
+  
+  /* When a tab is active, animate the underline */
+  .activeLink:after {
+    width: 100%;
+    left: 0;
+  }
+
+  .tlink {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    overflow: hidden; /* Ensure ripple doesn't overflow the tab */
+  }
+  
+  .ripple {
+    position: absolute;
+    background: rgba(128, 128, 128, 0.381); /* Light blue color for ripple */
+    border-radius: 50%;
+    transform: scale(0); /* Start small */
+    animation: ripple 0.6s ease-out; /* Ripple animation */
+    pointer-events: none; /* Make sure the ripple doesn't interfere with clicks */
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(4); /* The ripple grows to 4x its size */
+      opacity: 0; /* Ripple fades out */
+    }
+  }
+  
 /* projects */
 
 .projects{
@@ -624,7 +707,8 @@ font-size: 35px;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     font-family: var(--font2);
     font-size: 20px;
-
+    border: 2px solid rgba(128, 128, 128, 0.203);
+    background:rgba(128, 128, 128, 0.681)
 }
 ::placeholder{
     font-family: var(--font2);
@@ -651,6 +735,92 @@ font-size: 35px;
 .thanks{
     animation: blink 2.4s ease infinite  ;
 }
+/* Error Message Styling */
+.errorMsg {
+    color: red !important; /* Red text for error message */
+    font-size: 12px; /* Smaller font size */
+    margin-top: 5px; /* Some spacing above the error message */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Input Box Error Styling */
+  .error {
+    border: 2px solid rgba(255, 0, 0, 0.34) !important; /* Red border for input with error */
+    background-color: #ffe6e6 !important; /* Light red background to indicate error */
+    color: #333 !important; /* Text color inside the input */
+  }
+  
+  input.error::placeholder, 
+  textarea.error::placeholder {
+    color: red !important;
+    opacity: 0.3;
+  }
+  
+  /* Remove Border Class */
+  .removeBorder {
+    border: none;
+  }
+  
+  /* Hover effect on input fields to make them more interactive */
+  input:focus, 
+  textarea:focus {
+    outline: none;
+    /* border-color: #007bff70 !important; Highlight border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.668);
+  }
+  
+.submittingnForm{
+    background-color: rgba(128, 128, 128, 0.474) !important;
+    cursor: not-allowed !important;
+}
+
+/* Styling for input fields when an error is present */
+.errorField {
+    border: 2px solid #ff4d4d; /* Red border for error indication */
+    background-color: #ffe6e6; /* Light red background */
+  }
+  
+  /* Styling for error messages */
+  .errorMessage {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    font-style: italic;
+    display: block;
+  }
+  
+  /* For general form success and error messages */
+  .success {
+    color: #28a745; /* Green color for success message */
+    font-weight: bold;
+  }
+  
+  .errorMsg {
+    color: #ff4d4d; /* Red color for error message */
+    font-weight: bold;
+  }
+  
+  .vsble {
+    display: none;
+  }
+  
+  .activeMsg {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    border-radius: 5px;
+  }
+  
+  .success.activeMsg {
+    background-color: #d4edda; /* Light green background for success */
+    color: #155724; /* Dark green text */
+  }
+  
 @keyframes blink{
     0%{opacity: 0.2;}
     50%{opacity: 1;}

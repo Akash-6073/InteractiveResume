@@ -1,13 +1,13 @@
 import React, {useState}from 'react'
 import "../Style/style.css"
 import "../Style/utils.css"
-import tictt from "../Images/tictt.png"
-import notebook from "../Images/notebook.png"
-import ecart from "../Images/ecart.png"
-import tdl from "../Images/cc.png"
-import sc from "../Images/sc.png"
 
 export default function Projects() {
+    const tictt=process.env.REACT_APP_TICTT
+    const notebook=process.env.REACT_APP_NOTEBOOK
+    const ecart=process.env.REACT_APP_ECART
+    const tdl=process.env.REACT_APP_TDL
+    const sc=process.env.REACT_APP_SC
   return (
      <>
       <div className="hr mw3" name="projects">
