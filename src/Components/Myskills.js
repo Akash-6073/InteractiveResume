@@ -130,22 +130,22 @@ export default function Myskills(props) {
             {/* Languages Section */}
             <div className='linksRight' onClick={onclick} id='lang'>
               <div className='img'>
-                <img className='im1 ' src={cpp} alt="C++" /> <br />
+                <img className='im1' src={cpp} alt="C++" /> <br />
                 C++
                 <RatingCard rating={4} /> {/* C++ Rating */}
               </div>
               <div className='img'>
-                <img className='im1 ' src={py} alt="Python" /> <br />
+                <img className='im1' src={py} alt="Python" /> <br />
                 Python
                 <RatingCard rating={3} /> {/* Python Rating */}
               </div>
               <div className='img'>
-                <img className='im1 ' src={java} alt="Java" /> <br />
+                <img className='im1' src={java} alt="Java" /> <br />
                 Java
                 <RatingCard rating={3} /> {/* Java Rating */}
               </div>
               <div className='img'>
-                <img className='im1 ' src={js} alt="JavaScript" /> <br />
+                <img className='im1' src={js} alt="JavaScript" /> <br />
                 JavaScript
                 <RatingCard rating={3} /> {/* JavaScript Rating */}
               </div>

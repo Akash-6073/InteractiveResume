@@ -78,7 +78,7 @@ export default function Contact() {
       <div className='mw2 contactMain'>
         <div className="mw3 contact">
           <div className="contactLeft">
-            <h1 className='heading'>Contact me</h1>
+            <h1 className='heading'>Contact 👋  </h1>
             <p>
               <span><i className="fa-solid fa-envelope" style={{ color: "#ababab" }}></i></span>&nbsp;
               <a href="mailto:akashmahendrakar6073@gmail.com" style={{ textDecoration: "none", color: "black" }}>Email</a>

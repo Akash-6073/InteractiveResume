@@ -193,7 +193,7 @@
         overflow: hidden;
     }
     .box{
-        width:80vw
+        width:78vw
     }
   
 }
@@ -215,7 +215,7 @@
         justify-content: center;
     }
     .heading{
-        font-size: 50px;
+        font-size: 45px;
     }
     .im1{
         height: 70px;
@@ -257,12 +257,18 @@
     .im1{
         padding: 0 40px;
     }
+    .heading{
+        font-size: 40px;
+    }
     
     
 }
 @media screen and (max-width:360px) {
     .contactLeft i {
         font-size: 20px;
+    }
+    .heading{
+        font-size: 30px;
     }
 }
 @media screen and (max-width:345px) {
