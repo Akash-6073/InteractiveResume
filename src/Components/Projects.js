@@ -38,8 +38,8 @@ export default function Projects() {
                 <p className='contentDesc'>A MERN-based myNotebook app enabling users to effortlessly create, edit, and organize notes with MongoDB, ExpressJS, React, and Node.js.</p> <br />
                 <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used : </b> <span style={{color:"#ff004f"}}>MongoDB,  Express,  ReactJS,  NodeJS,  other frontend frameworks</span>  </p>
                 <div className='pbtns'>
-                   <a href="https://inotebook2-49rm.onrender.com/" target='_blank'> <button>Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
-                    <a href="https://github.com/Akash-6073/iNotebook-CRUD-APP-" target='_blank'><h1><i className="fa-brands fa-github fa-2xs"></i></h1></a>
+                   <a href="https://mynotebook-gamma.vercel.app/" target='_blank'> <button>Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
+                    <a href="https://github.com/Akash-6073/myNotebook" target='_blank'><h1><i className="fa-brands fa-github fa-2xs"></i></h1></a>
                 </div>
             </div>
         </div>
