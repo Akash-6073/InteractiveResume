@@ -26,8 +26,8 @@ export default function Projects() {
                 <p className='contentDesc'>Made a Ecommerce website (Ecart) with features seamless Stripe payment integration and includes an admin panel for efficient management of products, orders, and users.</p> <br />
                 <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used : </b> <span style={{color:"#ff004f"}}>MERN,  Stripe Payment,  Redux tools,  Axios,  Material UI,  and other frontend frameworks</span>  </p>
                 <div className='pbtns'>
-                   <a href="https://ecart-smoky.vercel.app/" target='_blank'> <button className='' >Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
-                    <a href="https://github.com/Akash-6073/Ecart-Project" target='_blank'><h1><i className="fa-brands fa-github fa-2xs " style={{height:"20px"}}></i></h1></a>
+                   <a href="https://ecart-site-ten.vercel.app/" target='_blank'> <button className='' >Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
+                    <a href="https://github.com/Akash-6073/Ecommerce-Website" target='_blank'><h1><i className="fa-brands fa-github fa-2xs " style={{height:"20px"}}></i></h1></a>
                 </div>
             </div>
         </div>
@@ -44,14 +44,14 @@ export default function Projects() {
             </div>
         </div>
         <div className="box ">
-        <h3>TIC - TAC - TOE</h3>
+        <h3>Online Voting System</h3>
             <img src={tictt} alt="" />
             <div className="content">
-                <p className='contentDesc'>Unleash your X's and O's in a sleek new Tic Tac Toe game built with HTML, CSS, and JavaScript!</p> <br />
-                <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used :  </b> <span style={{color:"#ff004f"}}>  HTML, CSS, JS</span></p>
+                <p className='contentDesc'>Developed an online voting app in a <b>Team project</b>, showcasing collaboration and project management while enhancing MERN stack skills.</p> <br />
+                <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used :  </b> <span style={{color:"#ff004f"}}>  MERN and other frameworks</span></p>
                 <div className='pbtns'>
-                   <a href="https://tice-tac-toe.netlify.app/" target='_blank'> <button>Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
-                    <a href="https://github.com/Akash-6073/Tic-Tac-Toe" target='_blank'><h1><i className="fa-brands fa-github fa-2xs"></i></h1></a>
+                   <a href="https://online-voting1.vercel.app/" target='_blank'> <button>Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
+                    <a href="https://github.com/Akash-6073/Online-Voting-System" target='_blank'><h1><i className="fa-brands fa-github fa-2xs"></i></h1></a>
                 </div>
             </div>
         </div>
