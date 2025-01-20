@@ -147,7 +147,7 @@ export default function Myskills(props) {
               <div className='img'>
                 <img className='im1' src={js} alt="JavaScript" /> <br />
                 JavaScript
-                <RatingCard rating={3} /> {/* JavaScript Rating */}
+                <RatingCard rating={4} /> {/* JavaScript Rating */}
               </div>
             </div>
 
@@ -166,7 +166,7 @@ export default function Myskills(props) {
               <div className='img'>
                 <img className='im1' src={js} alt="JavaScript" /> <br />
                 JavaScript
-                <RatingCard rating={3} /> {/* JavaScript Rating */}
+                <RatingCard rating={4} /> {/* JavaScript Rating */}
               </div>
               <div className='img'>
                 <img className='im1' src={bs} alt="Bootstrap" /> <br />
