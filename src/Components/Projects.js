@@ -75,7 +75,7 @@ GitHub API, providing real-time conversions.</p> <br />
                 <p className='contentDesc'>Built a CRUD app that improved my skills in managing state, handling asynchronous operations, and enhancing user interaction.</p> <br />
                 <p  className='techUsed' style={{textAlign:'left'}}> <b>Tech Used : </b> <span style={{color:"#ff004f"}}>MERN</span>  </p>
                 <div className='pbtns'>
-                   <a href="https://crud-app-pqua.onrender.com/" target='_blank'> <button >Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
+                   <a href="https://crud-app-yz3i.vercel.app/" target='_blank'> <button >Go to Website &nbsp; <i className="fa-solid fa-link"></i></button></a> 
                     <a href="https://github.com/Akash-6073/CRUD-APP" target='_blank'><h1><i className="fa-brands fa-github fa-2xs"></i></h1></a>
                 </div>
             </div>
